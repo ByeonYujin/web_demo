@@ -324,6 +324,7 @@ export class VideoRoomPage implements OnInit, OnDestroy {
         this.updateLayout();
     }
 
+    // 사용자 정보 임의 생성 (수정 필요)
     private generateParticipantInfo() {
         this.route.params.subscribe((params: Params) => {
             this.mySessionId = params.roomName;
