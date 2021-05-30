@@ -1,43 +1,61 @@
 <ion-header>
-    <ion-toolbar color="dark">
-        <ion-buttons slot="primary">
-            <ion-button color="light" (click)="dismiss()">
-                <ion-icon slot="icon-only" name="close"></ion-icon>
-            </ion-button>
-        </ion-buttons>
-        <ion-title>SETTING UP </ion-title>
-    </ion-toolbar>
+  <ion-toolbar color="dark">
+    <ion-buttons slot="primary">
+      <!-- <ion-button color="light" (click)="dismiss()">
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+      </ion-button> -->
+    </ion-buttons>
+    <ion-title color="dark">설정</ion-title>
+  </ion-toolbar>
 </ion-header>
 
-<ion-content class="ion-padding" id="content" [scrollEvents]="true" (ionScroll)="refreshVideos()">
-  <div  id="ovVideo" *ngIf="localUser && localUser.streamManager"> 
-      <ov-video [streamManager]="localUser.streamManager" [isBackCamera]="localUser.isBackCamera()"></ov-video>
-    </div>
-    <!-- Mic devices -->
-    <ion-item id="audioItem">
-        <ion-icon name="mic"></ion-icon>
-        <ion-label></ion-label>
-        <ion-select placeholder="Audio Devices" (ionChange)="setAudioDevice($event)">
-            <ion-select-option value="None">Disable</ion-select-option>
-            <ion-select-option *ngFor="let device of audioDevices" [value]="device">{{device.label}}</ion-select-option>
-        </ion-select>
-    </ion-item>
+<ion-content
+  class="ion-padding"
+  id="content"
+  [scrollEvents]="true"
+  (ionScroll)="refreshVideos()"
+>
+  <div id="ovVideo" *ngIf="localUser && localUser.streamManager">
+    <ov-video
+      [streamManager]="localUser.streamManager"
+      [isBackCamera]="localUser.isBackCamera()"
+    ></ov-video>
+  </div>
+  <!-- Mic devices -->
+  <ion-item id="audioItem">
+    <ion-icon name="mic"></ion-icon>
+    <ion-label></ion-label>
+    <ion-select placeholder="오디오 선택" (ionChange)="setAudioDevice($event)">
+      <ion-select-option value="None">오디오 끄기</ion-select-option>
+      <ion-select-option *ngFor="let device of audioDevices" [value]="device">{{
+        device.label
+      }}</ion-select-option>
+    </ion-select>
+  </ion-item>
 
-    <!-- Cam devices -->
-    <ion-item id="videoItem">
-
-        <ion-icon name="videocam"></ion-icon>
-        <ion-label></ion-label>
-        <ion-select placeholder="Cam Devices" (ionChange)="setVideoDevice($event)">
-            <ion-select-option value="None">Disable</ion-select-option>
-            <ion-select-option *ngFor="let device of videoDevices" [value]="device">{{device.label}}</ion-select-option>
-        </ion-select>
-    </ion-item>
+  <!-- Cam devices -->
+  <ion-item id="videoItem">
+    <ion-icon name="videocam"></ion-icon>
+    <ion-label></ion-label>
+    <ion-select placeholder="카메라 선택" (ionChange)="setVideoDevice($event)">
+      <ion-select-option value="None">카메라 끄기</ion-select-option>
+      <ion-select-option *ngFor="let device of videoDevices" [value]="device">{{
+        device.label
+      }}</ion-select-option>
+    </ion-select>
+  </ion-item>
 </ion-content>
 
 <ion-footer [style.height]="'55px'" [style.background]="'white'">
-    <ion-button id="join-button" (click)="join()" expand="block" shape="round" color="primary">
-        <ion-icon slot="start" name="videocam"></ion-icon>
-        Join
+  <div style="text-align: center !important">
+    <ion-button id="join-button" (click)="join()" shape="round" color="primary">
+      <ion-icon slot="start" name="videocam"></ion-icon>
+      입장
     </ion-button>
+
+    <ion-button color="light" (click)="dismiss()" shape="round" color="dark">
+      <ion-icon slot="start" name="close"></ion-icon>
+      취소
+    </ion-button>
+  </div>
 </ion-footer>

@@ -1,14 +1,22 @@
-
-<div class="OT_widget-container" *ngIf="user && user.streamManager" [id]="'container-' + this.user.streamManager.stream.streamId">
-    <ov-video #videoComponent [streamManager]="user.streamManager" [mutedSound]="mutedSound" [isBackCamera]="user.isBackCamera()"></ov-video>
-    <div id="statusIcons">
-            <ion-badge color="danger" *ngIf="!user.streamManager.stream.audioActive">
-                    <ion-icon name="mic-off" color="light"></ion-icon>
-            </ion-badge>
-            <ion-badge color="danger" *ngIf="!user.streamManager.stream.videoActive">
-                    <ion-icon name="eye-off" color="light"></ion-icon>
-            </ion-badge>
-            
-    </div>
+<div
+  class="OT_widget-container"
+  *ngIf="user && user.streamManager"
+  [id]="'container-' + this.user.streamManager.stream.streamId"
+  [name]="this.user.username"
+>
+  <ov-video
+    #videoComponent
+    [streamManager]="user.streamManager"
+    [mutedSound]="mutedSound"
+    [isBackCamera]="user.isBackCamera()"
+  ></ov-video>
+  <div id="statusIcons">
+    <ion-badge color="danger" *ngIf="!user.streamManager.stream.audioActive">
+      <ion-icon name="mic-off" color="light"></ion-icon>
+    </ion-badge>
+    <ion-badge color="danger" *ngIf="!user.streamManager.stream.videoActive">
+      <ion-icon name="eye-off" color="light"></ion-icon>
+    </ion-badge>
+  </div>
+  <p class="nickname">{{ user.nickname }}</p>
 </div>
-

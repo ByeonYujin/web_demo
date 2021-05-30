@@ -13,6 +13,8 @@ import { ChatComponent } from '../shared/components/chat/chat.component';
 
 import { StreamComponent } from '../shared/components/stream/stream.component';
 import { SettingUpModalComponent } from '../shared/components/setting-up-modal/setting-up-modal.component';
+import { VariableAst } from '@angular/compiler';
+import { filter } from 'rxjs/operators';
 declare var cordova;
 
 @Component({
@@ -265,8 +267,8 @@ export class VideoRoomPage implements OnInit, OnDestroy {
                     videoSource: this.localUser.getVideoSource(),
                     publishAudio: this.localUser.isVideoActive(),
                     publishVideo: this.localUser.isVideoActive(),
-                    mirror: !this.localUser.isBackCamera()
-                });
+                    mirror: !this.localUser.isBackCamera(),
+                })
 
                 this.cameraBtnColor = this.cameraBtnColor === 'light' ? 'primary' : 'light';
                 this.localUser.setStreamManager(null);
@@ -328,7 +330,7 @@ export class VideoRoomPage implements OnInit, OnDestroy {
     private generateParticipantInfo() {
         this.route.params.subscribe((params: Params) => {
             this.mySessionId = params.roomName;
-            this.myUserName = 'OpenVidu_User' + Math.floor(Math.random() * 100000);
+            this.myUserName = 'User' + Math.floor(Math.random() * 100000);
         });
     }
 

@@ -2,7 +2,7 @@
   "name": "openvidu-call-ionic",
   "version": "0.0.1",
   "author": "OpenVidu",
-  "homepage": "https://openvidu.io/",
+  "homepage": "https://192.168.219.102:4443",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -26,6 +26,7 @@
     "@ionic-native/splash-screen": "5.30.0",
     "@ionic-native/status-bar": "5.30.0",
     "@ionic/angular": "5.5.1",
+    "cordova": "^10.0.0",
     "cordova-android": "9.0.0",
     "cordova-android-support-gradle-release": "3.0.1",
     "cordova-ios": "6.2.0",

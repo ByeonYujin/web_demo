@@ -1,15 +1,15 @@
 import { TestBed, inject } from '@angular/core/testing';
 
-import { OpenviduService } from './openvidu.service';
+import { OpenViduService } from './openvidu.service';
 
 describe('OpenviduService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [OpenviduService]
+      providers: [OpenViduService]
     });
   });
 
-  it('should be created', inject([OpenviduService], (service: OpenviduService) => {
+  it('should be created', inject([OpenViduService], (service: OpenViduService) => {
     expect(service).toBeTruthy();
   }));
 });

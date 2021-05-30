@@ -8,7 +8,7 @@ import { AndroidPermissions } from '@ionic-native/android-permissions/ngx';
     providedIn: 'root',
 })
 export class OpenViduService {
-    OPENVIDU_SERVER_URL = 'https://192.168.219.102:4443'; //Server ip 입력
+    OPENVIDU_SERVER_URL = 'https://192.168.219.101:4443'; //Server ip 입력
     MY_SECRET = 'MY_SECRET';
     ANDROID_PERMISSIONS = [
         'android.permission.CAMERA',
@@ -75,7 +75,7 @@ export class OpenViduService {
     }
 
     public getRandomAvatar(): string {
-        return 'https://openvidu.io/img/logos/openvidu_globe_bg_transp_cropped.png';
+        return 'https://www.searchpng.com/wp-content/uploads/2019/02/User-Icon-PNG.png';
     }
 
     public checkAndroidPermissions(): Promise<void> {

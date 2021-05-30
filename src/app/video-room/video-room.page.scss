@@ -1,23 +1,28 @@
-.demo-logo{
-  max-width: 33%;
-  padding-left: 5px;
-  padding-right: 10px;
+// .demo-logo {
+//   max-width: 33%;
+//   padding-left: 5px;
+//   padding-right: 10px;
+// }
+
+ion-toolbar {
+  --background: transparent;
+  --ion-color-base: transparent !important;
 }
 
-
-#video-room-content{
+#video-room-content {
   overflow-y: none;
 }
 
-#exitButton{
+#exitButton {
   font-size: 30px;
 }
 
-#micButton, #camButton{
+#micButton,
+#camButton {
   font-size: 18px;
 }
 
-#rightButtons ion-fab-button{
+#rightButtons ion-fab-button {
   --box-shadow: none;
 }
 
@@ -34,7 +39,7 @@
   //width: inherit;
 }
 
-.boundsLight{
+.boundsLight {
   background-color: #dfdfdf !important;
 }
 
@@ -64,16 +69,14 @@
   vertical-align: baseline;
 }
 
-.OT_main{
+.OT_main {
   /*top: 0 !important;
   bottom: 0 !important;
   left: 0 !important;
   right: 0 !important;*/
-   //height: -webkit-fill-available !important;
+  //height: -webkit-fill-available !important;
   // width: -webkit-fill-available !important;
-
 }
-
 
 .OT_dialog-centering {
   display: table;
@@ -94,7 +97,7 @@
   margin-left: auto;
 
   color: #fff;
-  font-family: 'Didact Gothic', sans-serif;
+  font-family: "Didact Gothic", sans-serif;
   font-size: 13px;
   line-height: 1.4;
 }
@@ -693,7 +696,7 @@
 
 .OT_audio-level-meter:before {
   /* makes the height of the container equals its width */
-  content: '';
+  content: "";
   display: block;
   padding-top: 100%;
 }
@@ -723,7 +726,7 @@
 
 .OT_audio-level-meter__audio-only-img:before {
   /* makes the height of the container equals its width */
-  content: '';
+  content: "";
   display: block;
   padding-top: 100%;
 }
@@ -731,7 +734,11 @@
 .OT_audio-level-meter__value {
   position: absolute;
   border-radius: 50%;
-  background-image: radial-gradient(circle, rgba(151, 206, 0, 1) 0%, rgba(151, 206, 0, 0) 100%);
+  background-image: radial-gradient(
+    circle,
+    rgba(151, 206, 0, 1) 0%,
+    rgba(151, 206, 0, 0) 100%
+  );
 }
 
 .OT_audio-level-meter.OT_mode-off {
@@ -858,7 +865,7 @@
 
 .OT_video-unsupported-img:before {
   /* makes the height of the container 93% of its width (90/97 px) */
-  content: '';
+  content: "";
   display: block;
   padding-top: 93%;
 }
