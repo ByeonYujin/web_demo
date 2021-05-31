@@ -8,7 +8,7 @@ import { AndroidPermissions } from '@ionic-native/android-permissions/ngx';
     providedIn: 'root',
 })
 export class OpenViduService {
-    OPENVIDU_SERVER_URL = 'https://192.168.219.101:4443'; //Server ip 입력
+    OPENVIDU_SERVER_URL = 'https://192.168.219.102:4443'; //Server ip 입력
     MY_SECRET = 'MY_SECRET';
     ANDROID_PERMISSIONS = [
         'android.permission.CAMERA',
