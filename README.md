@@ -2,10 +2,10 @@
 
 ## 충북대학교 소프트웨어학과 캡스톤디자인 프로젝트
 
-  <div><h3>
+<h3>
     &#127939;실시간 1:1 PT 서비스 기반
     실내 운동 트레이닝 및 건강관리 모바일 앱
-  </h3></div>
+  </h3>
 <br/>
 
 [TEAM REPOSITORY](https://github.com/Team-RELIFE)
